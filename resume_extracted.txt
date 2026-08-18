@@ -1,0 +1,58 @@
+Rishee Nithyananda Venkatraman
+risheevenkatraman@gmail.com | +1 943-201-2011
+|
+EDUCATION
+AI/ML Engineering Course Certification Graduated August 2026
+TripleTen Salt Lake City, UT
+Bachelor of Science - Biomedical Engineering Graduated May 2026
+Georgia Institute of Technology Atlanta, GA
+SKILLS
+Programming Languages Python | Java | C++ | C | C# | JavaScript/TypeScript | R | Scala | Rust
+Technologies AWS | pandas| Docker | React.js | Flask | MySQL | MongoDB | NumPy | PyTorch
+Git | Scikit-learn | Apache Spark | TensorFlow | Azure
+EXPERIENCE
+Self Employment Since May 2022
+PC Builder/Optimizer Atlanta, GA
+• Helped clients off my own personal website and through recommendations from satisfied customers design
+and build computer/server systems.
+• Sourced parts to design systems within my customers’ budgets while prioritizing performance and fitting their
+specific needs out of a computer system.
+• Created my own set of windows optimizations and general PC optimization software to improve the overall
+performance of computer systems, remove unnecessary bloatware, and optimize windows processes.
+EXIGO Technologies LLC Feb 2026 - Jul 2026
+AI Integration Engineer Suwanee, GA
+• Helped integrate AI tools into the workflow for this startup, tools including Zapier and Warp to help manage
+workflow and payroll.
+• Taught startup employees how to utilize AI programming tools such as Claude, GitHub Copilot, and more to
+streamline development pipelines and projects.
+• Developed an internal file summarization/query system using RAG methodology and DeepSeek-R1 as the LLM
+model.
+South Forsyth HS Jan 2023 - May 2025
+Alumni FRC Mentor Cumming, GA
+• Was the lead programmer and electrician until my graduation in 2022. Following 3 FRC seasons I returned as
+an alumni mentor to teach current members and guide them through the FIRST Robotics Competition season.
+• Taught programming team members basic software development concepts, source control, basic to intermedi-
+ate Java, and the features of the FRC Java API and its libraries.
+• Attended competitions with the active team each year to advise players during the competition, helping the
+team secure two back to back world championship qualifications.
+NOTABLE PROȷECTS
+Stock Prediction App March 2026 - Current
+AI/ML Developer Atlanta, GA
+• Developing a stock prediction app with a set of 3 other developers to track stock market movements of popular
+stocks, track movements of public trades by successful stock traders, and provide information to increase the
+financial literacy of users.
+• Utilized data science concepts to pull information of popular stocks, new upcoming stocks, and movements
+made by top traders. Took the pulled data and cleaned and processed it through a data pipeline to yield clean
+data to fine tune LLM model for our purposes.
+• Utilized data processed through data pipeline to fine tune DeepSeek-R1 model to process stock market data
+and make predictions to suggest stocks to users. Additionally analyzes the movements of traders that are fed to
+it to learn why those movements were made by comparing with news headlines regarding the company.
+eSports Organization Website Jul 2026 - Aug 2026
+Full Stack Developer Atlanta, GA
+• Individually developed a website for an upcoming North American eSports organization called Zodiac eSports.
+• Created necessary pages and features to the owner’s design, such as pages showcasing their individual teams,
+a home page showcasing new organization social media posts, page showing their staff, and a shop page.
+• Integrated JavaScript features to the website pages to create an interactable shop that will allow you to process
+payments right in the website. Integrated MySQL as a backend database to allow website users to create profiles
+for easy information saving for checkout, sign up for newsletters, and other features that require users to create
+a profile.

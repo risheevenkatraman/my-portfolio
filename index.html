@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rishee Nithyananda Venkatraman — Portfolio</title>
+    <style>
+      :root{
+        --midnight: #071030; /* deep midnight blue */
+        --midnight-2: #0b1a3a;
+        --accent: #ffb88c; /* pastel orange */
+        --muted-bg: #f7f8fb;
+        --card: #ffffff;
+        --text-dark: #0b1220;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: linear-gradient(180deg, var(--midnight) 0%, #071424 50%, #f6f8fb 100%);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      header {
+        background: linear-gradient(90deg, var(--midnight), var(--midnight-2));
+        color: white;
+        padding: 20px 40px;
+        box-shadow: 0 4px 18px rgba(2,8,23,0.6);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.2px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu a {
+        color: #e6eefb;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: background 160ms ease, color 160ms ease;
+        font-weight: 600;
+      }
+
+      .menu a:hover {
+        background: rgba(255,184,140,0.12);
+        color: white;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(7,16,48,0.9), rgba(11,26,58,0.85));
+        color: white;
+        padding: 80px 0 60px 0;
+      }
+
+      .hero-content {
+        max-width: 720px;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        margin-bottom: 20px;
+        color: rgba(255,255,255,0.9);
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--midnight);
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 700;
+        box-shadow: 0 6px 18px rgba(11,26,58,0.18);
+        border: none;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 18px;
+        color: var(--midnight);
+      }
+
+      .about, .skills, #education, #experience, #projects, #resume {
+        background: transparent;
+      }
+
+      /* Card style used for resume sections */
+      .container > .card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 8px 30px rgba(9,20,40,0.08);
+        margin-bottom: 20px;
+      }
+
+      /* Skills grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .skill-item {
+        background: linear-gradient(180deg,#fff 0%, #fffaf5 100%);
+        border: 1px solid rgba(11,26,58,0.04);
+        color: var(--midnight);
+        padding: 14px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(11,26,58,0.04);
+      }
+
+      /* Resume/education/experience/project layout */
+      #education .container,
+      #experience .container,
+      #projects .container,
+      #resume .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      /* Turn each item into a card */
+      .edu-item, .exp-item, .project-item {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 10px;
+        border-left: 4px solid var(--accent);
+        box-shadow: 0 6px 20px rgba(9,20,40,0.06);
+      }
+
+      .edu-item h3, .exp-item h3, .project-item h3 {
+        margin: 0 0 6px 0;
+        color: var(--midnight);
+        font-size: 1.05rem;
+      }
+
+      .edu-item p, .exp-item p, .project-item p {
+        margin: 0 0 10px 0;
+        color: #475569;
+        font-size: 0.95rem;
+      }
+
+      .exp-item ul, .project-item ul {
+        margin: 8px 0 0 18px;
+        color: #334155;
+      }
+
+      /* Embed styling */
+      embed[type="application/pdf"] {
+        border-radius: 8px;
+        overflow: hidden;
+        display: block;
+        border: 1px solid rgba(11,26,58,0.06);
+        box-shadow: 0 10px 30px rgba(9,20,40,0.08);
+      }
+
+      /* Responsive: two-column layout for larger screens */
+      @media (min-width: 860px) {
+        #experience .container, #projects .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero {
+          padding-top: 100px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header { padding: 14px 18px; }
+        .brand { font-size: 1rem; }
+        h1 { font-size: 1.9rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">Rishee Nithyananda Venkatraman</div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <h1>Welcome to My Portfolio</h1>
+          <p>
+            Hi, I'm Rishee Nithyananda Venkatraman — a data-driven professional passionate about solving
+            problems with analysis, creativity, and technology.
+          </p>
+          <a href="#about" class="btn">Learn More</a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            I am a data science enthusiast with a strong interest in machine learning,
+            statistics, and business intelligence. I enjoy turning raw data into
+            meaningful insights and building solutions that help people make smarter
+            decisions.
+          </p>
+          <p>
+            My work combines analytical thinking, technical skills, and a passion for
+            learning. I am motivated by challenges that require both creativity and
+            problem-solving.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">Data Visualization</div>
+            <div class="skill-item">Pandas</div>
+            <div class="skill-item">NumPy</div>
+            <div class="skill-item">Scikit-learn</div>
+            <div class="skill-item">Statistics</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="about">
+        <div class="container">
+          <h2>Resume</h2>
+          <p>Download my resume or view it below.</p>
+          <a href="Rishee_Venkatraman_CV___2026 (1).pdf" class="btn" download target="_blank" rel="noopener noreferrer">Download Resume</a>
+          <div style="margin-top:20px;">
+            <embed src="Rishee_Venkatraman_CV___2026 (1).pdf" type="application/pdf" width="100%" height="600px" />
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="about">
+        <div class="container">
+          <h2>Education</h2>
+          <div class="edu-item">
+            <h3>AI/ML Engineering Course Certification — TripleTen</h3>
+            <p>Salt Lake City, UT — Graduated August 2026</p>
+          </div>
+
+          <div class="edu-item">
+            <h3>Bachelor of Science, Biomedical Engineering — Georgia Institute of Technology</h3>
+            <p>Atlanta, GA — Graduated May 2026</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="about">
+        <div class="container">
+          <h2>Experience</h2>
+
+          <div class="exp-item">
+            <h3>PC Builder / Optimizer — Self Employment</h3>
+            <p>Atlanta, GA — Since May 2022</p>
+            <ul>
+              <li>Designed and built computer/server systems for clients, sourcing parts to meet budgets and performance goals.</li>
+              <li>Created Windows optimizations and PC optimization software to improve performance and remove bloatware.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>AI Integration Engineer — EXIGO Technologies LLC</h3>
+            <p>Suwanee, GA — Feb 2026 – Jul 2026</p>
+            <ul>
+              <li>Integrated AI tools (Zapier, Warp) into company workflows to improve operations and payroll management.</li>
+              <li>Trained staff on AI programming tools such as Claude and GitHub Copilot to streamline development.</li>
+              <li>Developed an internal file summarization/query system using RAG methodology and DeepSeek-R1.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h3>Alumni FRC Mentor — South Forsyth High School</h3>
+            <p>Cumming, GA — Jan 2023 – May 2025</p>
+            <ul>
+              <li>Led programming and electrical mentorship; taught Java, source control, and the FRC Java API.</li>
+              <li>Advised the team during competitions, contributing to two back-to-back world championship qualifications.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="about">
+        <div class="container">
+          <h2>Notable Projects</h2>
+
+          <div class="project-item">
+            <h3>Stock Prediction App — AI/ML Developer</h3>
+            <p>March 2026 – Current — Atlanta, GA</p>
+            <ul>
+              <li>Built data pipelines to pull, clean, and process stock and trader movement data for model fine-tuning.</li>
+              <li>Fine-tuned DeepSeek-R1 on processed data to generate stock movement predictions and trader behavior analysis.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <h3>eSports Organization Website — Full Stack Developer</h3>
+            <p>Jul 2026 – Aug 2026 — Atlanta, GA</p>
+            <ul>
+              <li>Developed a full website for Zodiac eSports including team pages, staff pages, social feed, and an integrated shop.</li>
+              <li>Integrated MySQL as a backend, implemented user profiles, and added client-side JavaScript for shop interactions.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
